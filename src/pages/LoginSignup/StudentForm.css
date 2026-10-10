@@ -1,0 +1,11 @@
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #6b4bff;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}

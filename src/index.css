@@ -1,0 +1,51 @@
+:root {
+  --primary-body-color: rgb(216, 255, 249);
+  --primary-CTA-color: #236688;
+  --hover-CTA-color: #fec563;
+  --primary-CTA-bg-color: #fec563;
+  --hover-CTA-bg-color: #236688;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color:var(--primary-body-color);
+    box-sizing: border-box;
+}
+.btnCTA {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight:600;
+    font-size:medium;
+    transition: all 0.3s ease;
+    background-color: var(--primary-CTA-bg-color);
+    color: var(--primary-CTA-color);
+    border: none;
+    box-shadow: inset 0 0 6px 0 #1c6ade;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
+.btnCTA:hover{
+    background-color:var(--hover-CTA-bg-color) ;
+    color: var(--hover-CTA-color);
+    box-shadow: inset 0 0 6px 0 rgb(207, 255, 248);
+}
+.btnCTA:hover .btnIcon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(41%) saturate(638%) hue-rotate(334deg) brightness(101%) contrast(101%);
+}
+.btnCTA:active{
+  transform: scale(0.9);
+}
+.btnIcon {
+    height: 20px;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(28%) sepia(15%) saturate(2978%) hue-rotate(173deg) brightness(94%) contrast(89%);
+    transition: filter 0.1s ease;
+}

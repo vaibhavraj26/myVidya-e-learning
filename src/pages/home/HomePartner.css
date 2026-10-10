@@ -1,0 +1,121 @@
+
+.partners-section {
+  margin: 3rem auto;
+  padding: 2rem 0;
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+.partners-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.carousel-row {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1.5rem; 
+  
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content; 
+  align-items: center; 
+  gap: 2rem; 
+}
+
+.partner-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0; 
+  width: 300px; 
+  height: 90px; 
+  padding: 1rem;
+  background: #ffffff70;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.partner-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.partner-box img {
+  height: 50px; 
+  width: 50px;
+  object-fit: contain;
+  /* margin-bottom: 0.75rem; */
+}
+
+.partner-detils p {
+  font-size: 1.1rem; 
+  color: #181818;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+.partner-details span {
+  display: block;
+  font-size: 0.875rem; 
+  color: #555;
+  font-weight: 500;
+  /* text-align: center; */
+  margin-top: 6px;
+  white-space: normal;
+}
+
+.right-to-left {
+  animation: scroll-rtl 40s linear infinite;
+}
+
+.left-to-right {
+  animation: scroll-ltr 40s linear infinite;
+}
+
+
+
+
+@keyframes scroll-rtl {
+  0% {
+    /* Starts at the beginning */
+    transform: translateX(0);
+  }
+  100% {
+    /* Ends after the first full set of logos has passed */
+    /* -50% works because your track is 200% width (original + copy) */
+    transform: translateX(-50%);
+  }
+}
+
+/* Animation for the bottom row (left-to-right) */
+@keyframes scroll-ltr {
+  0% {
+    /* Starts at the halfway point */
+    transform: translateX(-50%);
+  }
+  100% {
+    /* Ends at the beginning */
+    transform: translateX(0);
+  }
+}
+

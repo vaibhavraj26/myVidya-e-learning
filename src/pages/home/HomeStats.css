@@ -1,0 +1,25 @@
+.stats-section {
+  padding: 60px 20px;
+}
+
+.stats-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0055a4;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 1.3rem;
+  color: #28303d;
+}

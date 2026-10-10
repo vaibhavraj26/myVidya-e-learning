@@ -1,0 +1,83 @@
+.auth-wrapper {
+  position: relative; /* allow overlapping */
+  display: flex;
+  height: 100vh;
+  background: rgb(216, 255, 249);
+}
+
+/* LEFT SIDE */
+
+.auth-left {
+  width: 55%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+.auth-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 40%,
+    rgb(72, 151, 138) 99%
+  ); /* darkness level */
+  backdrop-filter: brightness(0.8); 
+  pointer-events: none;
+}
+
+.carousel,
+.carousel-track {
+  height: 100%;
+}
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-track {
+  animation: slideStep 12.5s infinite;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0px;
+}
+.carousel img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: top center; /* ✅ lift image upward */
+}
+
+@keyframes slideStep {
+  0%,
+  15% {
+    transform: translateX(0);
+  } /* show 1st image */
+  20%,
+  35% {
+    transform: translateX(-100%);
+  } /* 2nd image */
+  40%,
+  55% {
+    transform: translateX(-200%);
+  } /* 3rd image */
+  60%,
+  75% {
+    transform: translateX(-300%);
+  } /* 4th image */
+  80%,
+  95% {
+    transform: translateX(-400%);
+  } /* 5th image */
+  100% {
+    transform: translateX(-500%);
+  } /* loop end */
+}
+
+
+

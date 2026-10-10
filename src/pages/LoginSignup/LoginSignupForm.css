@@ -1,0 +1,93 @@
+/* RIGHT SIDE */
+.auth-right {
+  position: absolute; /* overlap enabled */
+  right: 0; /* stick to right side */
+  top: 0;
+  bottom: 0;
+  width: 50%; /* takes half of screen width */
+  /* max-width: 600px;         optional limit to keep it clean */
+  background: rgb(216, 255, 249);
+  padding: 60px;
+  border-radius: 60px 0 0 60px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.18); /* soft elevation */
+}
+
+.auth-right h2 {
+  color: #236688;
+  text-align: center;   /* Center Heading */
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.role-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.role-btn {
+  padding: 12px 0px;
+  border-radius: 10px;
+  border: 1.5px solid rgb(128, 209, 196);
+  background: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  /* font-weight: 600; */
+  font-size:medium;
+  color: #4c4c4c;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.role-btn:hover {
+  border-color: #236688;
+  background: #d5ebf5;
+}
+
+.role-btn.active {
+  background: #236688;
+  color: #fec563;
+  border-color: #236688;
+  /* box-shadow: 0 0 3px #236688; */
+}
+
+
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1.5px solid rgb(128, 209, 196);
+  font-size: 15px;
+}
+.auth-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fec563;
+  border: none;
+  color: #236688;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.toggle-text {
+  margin-top: 14px;
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+}
+
+.toggle-link {
+  color: #236688;
+  font-weight: 600;
+  cursor: pointer;
+}

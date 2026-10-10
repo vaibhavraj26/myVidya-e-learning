@@ -1,0 +1,132 @@
+
+.roles-section {
+  padding: 60px 20px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #424242;
+}
+.roles-title{
+  text-align: center;
+  margin: 0 0 28px 0;
+  font-size: 1.7rem;
+  color: #0055a4;
+}
+.roles-grid{
+  width: min(1000px, 94%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0; 
+  border: 3px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.role-card{
+  padding: 30px 15%;
+  min-height: 210px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.role-card:nth-child(1),
+.role-card:nth-child(3){
+  border-right: 2px dashed rgba(0, 0, 0, 0.3);
+}
+.role-card:nth-child(1),
+.role-card:nth-child(2){
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.3);
+}
+
+.role-head{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.emoji {
+  font-size: 2rem;
+  line-height: 1;
+  background-color: rgba(173, 255, 228);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255);
+  padding: 5px;
+  border-radius: 10px;
+}
+.role-head h3{
+  margin: 0;
+  font-size: 1.125rem;
+  color: #0055a4;
+  letter-spacing: 0.2px;
+}
+
+.role-points{
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.role-points li{
+  position: relative;
+  padding-left: 18px;
+  color:  #6b7280;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+.role-points li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: #0055a4;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: rgb(173, 255, 228);
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255);
+    z-index: 2;
+}
+.center-logo img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive: stack on small screens with visible dotted separators */
+@media (max-width: 720px){
+  .roles-grid{
+    grid-template-columns: 1fr;
+  }
+  /* remove right borders, keep bottom */
+  .role-card:nth-child(1),
+  .role-card:nth-child(3){
+    border-right: none;
+  }
+  .role-card:nth-child(1),
+  .role-card:nth-child(2),
+  .role-card:nth-child(3){
+    border-bottom: 2px dotted var(--dotted);
+  }
+  .role-card{
+    padding: 20px;
+    min-height: auto;
+  }
+}
